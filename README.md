@@ -19,14 +19,14 @@ After accessing Active Directory, we are presented with a page resembling the on
 
 
 <p align="center">
-<img src="https://imgur.com/a/LQNGS7n" height="80%" width="80%" alt="OU modification"/>
+<img src="https://files.catbox.moe/cg25cg.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
 
 On the left side, we find the Organizational Units (OUs), allowing us to choose the unit we wish to explore and view the users associated with it. In this case, we will focus on the IT OU and its corresponding users: Claire, Mary, and Phillip.
 <p align="center">
-<img src="https://imgur.com/a/LQNGS7n" height="80%" width="80%" alt="OU modification"/>
+<img src="https://files.catbox.moe/tzx9tl.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 As noted earlier, delegation can be assigned to any user within this OU. In this instance, we will grant Phillip delegation authority over the Sales OU. Put simply, this means we are endowing Phillip with the privilege to reset passwords for all individuals within the Sales department, who include the following:

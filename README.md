@@ -31,47 +31,47 @@ On the left side, we find the Organizational Units (OUs), allowing us to choose 
 
 As noted earlier, delegation can be assigned to any user within this OU. In this instance, we will grant Phillip delegation authority over the Sales OU. Put simply, this means we are endowing Phillip with the privilege to reset passwords for all individuals within the Sales department, who include the following:
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/3.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
 Now, to grant Phillip this privilege, we will right-click on the Sales OU and select 'Delegate Control'."
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/4.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
 After clicking this, a new tab will be open which looks like this: 
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/5.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 After clicking 'Next', we will encounter a screen similar to the one below. Then, we'll proceed to click the 'Add' button to include Phillip in the designated box.
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/6.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
 After clicking 'Add', a tab similar to this will appear. In the lower box, we will type the name of the user to whom we want to grant delegation. Once the name is entered, it's crucial to CLICK 'Check Names' to prompt Active Directory to search for the specific user. This step helps prevent misspellings of the user's name. Once the desired user is located, we click 'OK'.
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/7.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 We will then see the following screen, simply press “next”. 
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/8.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
 Upon clicking 'Next', the following options will be displayed. As shown in the image below, various special privileges can be granted to Phillip. However, as we are solely providing him with the privilege to reset passwords, we will select the second box. After this selection, continue to press 'Next' until you are returned to the Active Directory screen.
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/9.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
 Now that we have granted Phillip the necessary privileges, let's put it to the test using PowerShell. In this example, we will reset Sophie's password, who is a user in the Sales OU. To begin, open PowerShell and navigate to the user Phillip, as demonstrated below."
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/10.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
@@ -81,7 +81,7 @@ Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Pro
 <br>
 as shown below. After running this command we will be prompted with a “ new password.” This new password will be the temporary password we will assign to Sophie. 
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/11.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 
@@ -92,12 +92,12 @@ Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose <br>
 <br>
 
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/12.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 After completing these steps, we can verify that Sophie will need to reset her password by attempting to log into her account. As illustrated below, upon using the temporary password, we are directed to the password reset page.
 <p align="center">
-<img src="https://i.imgur.com/9T1O4m5.png" height="80%" width="80%" alt="OU modification"/>
+<img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/13.png" height="80%" width="80%" alt="OU modification"/>
 </p>
 
 

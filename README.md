@@ -17,6 +17,7 @@ In numerous organizations, the sheer volume of employees often prompts the engag
 
 After accessing Active Directory, we are presented with a page resembling the one depicted below.
 img 1
+<a href="https://imgur.com/zY1gN1l"></a>
 
 
 On the left side, we find the Organizational Units (OUs), allowing us to choose the unit we wish to explore and view the users associated with it. In this case, we will focus on the IT OU and its corresponding users: Claire, Mary, and Phillip.

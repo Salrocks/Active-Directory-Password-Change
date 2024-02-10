@@ -109,7 +109,7 @@ In numerous organizations, the sheer volume of employees often prompts the engag
 <li>In power shell we will run the command: <br>
 
       Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Prompt 'New Password') -Verbose) 
-as shown below. After running this command we will be prompted with a “ new password.” This new password will be the temporary password we will assign to Sophie. </li><br>
+as shown below. After running this command we will be prompted with a “ new password.” This new password will be the temporary password we will assign to Sophie. </li>
 <p align="center">
 <img src="https://github.com/Salrocks/ActiveDirectoryPasswordChangewithDelegation/blob/main/11.png" height="80%" width="80%" alt="OU modification"/>
 </p>
